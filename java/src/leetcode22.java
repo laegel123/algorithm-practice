@@ -25,15 +25,11 @@ public class leetcode22 {
         }
 
         if (openCount < n) {
-            str += "(";
-            recur(openCount + 1, closeCount, n, str, result);
-            str = str.substring(0, str.length() - 1);
+            recur(openCount + 1, closeCount, n, str + "(", result);
         }
 
         if (openCount > closeCount) {
-            str += ")";
-            recur(openCount, closeCount + 1, n, str, result);
-            str = str.substring(0, str.length() - 1);
+            recur(openCount, closeCount + 1, n, str + ")", result);
         }
     }
 }
