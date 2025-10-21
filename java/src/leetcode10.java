@@ -21,6 +21,7 @@ public class leetcode10 {
                 if (j+1 < m && p.charAt(j+1) == '*') {
                     dp[i][j] = dp[i][j+2] || (firstMatch && dp[i+1][j]);
                 } else {
+                // case not *
                     dp[i][j] = firstMatch && dp[i+1][j+1];
                 }
             }
