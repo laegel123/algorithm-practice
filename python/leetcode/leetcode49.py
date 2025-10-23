@@ -21,7 +21,7 @@ class Solution:
             s = strs[i]
             count = [0] * 26
             for c in s:
-                count[ord(c) - ord('a')] = count[ord(c) - ord('a')] + 1
+                count[ord(c) - ord('a')] += 1
 
             dic[tuple(count)].append(s)
 
