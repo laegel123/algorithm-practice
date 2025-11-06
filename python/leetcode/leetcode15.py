@@ -15,7 +15,7 @@ class Solution:
             l = i + 1
             r = len(nums) - 1
 
-            while(l < r):
+            while l < r:
                 three_sum = n + nums[l] + nums[r]
 
                 if three_sum > 0:
