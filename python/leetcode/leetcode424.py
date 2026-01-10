@@ -13,7 +13,27 @@ class Solution:
 
         return res
 
+    def characterReplacementWithSlideWindow(self, s: str, k: int) -> int:
+        char_set = set(s)
+        res = 0
+
+        for c in char_set:
+            cnt = 0
+            l = 0
+            for i in range(len(s)):
+                if s[i] == c:
+                    cnt += 1
+
+                while i - l + 1 - cnt > k:
+                    if s[l] == c:
+                        cnt -= 1
+                    l += 1
+
+                res = max(res, i - l + 1)
+
+        return res
+
 
 if __name__ == "__main__":
     s = Solution()
-    print(s.characterReplacement("AAABABB", 1))
+    print(s.characterReplacementWithSlideWindow("AABABBA", 1))
