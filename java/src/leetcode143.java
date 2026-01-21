@@ -6,14 +6,15 @@ import java.util.List;
  * @version 1.0
  * @since 2026-01-20
  */
-class ListNode {
-     int val;
-     ListNode next;
-     ListNode() {}
-     ListNode(int val) { this.val = val; }
-     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- }
 class Leetcode143 {
+    class ListNode {
+        int val;
+        ListNode next;
+        ListNode() {}
+        ListNode(int val) { this.val = val; }
+        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    }
+
     public void reorderList(ListNode head) {
         List<ListNode> list = new ArrayList<>();
         ListNode curNode = head;
