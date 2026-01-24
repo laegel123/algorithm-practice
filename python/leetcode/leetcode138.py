@@ -21,3 +21,20 @@ class Solution:
         copy.next = self.copyRandomList(head.next)
         copy.random = self.map.get(head.random)
         return copy
+
+    def copyRandomList2(self, head: 'Optional[Node]') -> 'Optional[Node]':
+        map = {None: None}
+        cur = head
+        while cur:
+            copy = Node(cur.val)
+            map[cur] = copy
+            cur = cur.next
+        cur = head
+
+        while cur:
+            copy = map.get(cur)
+            copy.next = map.get(cur.next)
+            copy.random = map.get(cur.random)
+            cur = cur.next
+
+        return map[head]
