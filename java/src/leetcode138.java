@@ -6,7 +6,7 @@ import java.util.HashMap;
  * @since 2026-01-23
  */
 
-class Solution {
+class leetcode138 {
     class Node {
         int val;
         Node next;
