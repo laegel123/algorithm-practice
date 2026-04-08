@@ -9,8 +9,6 @@ public class programmers468371 {
 
 
     public int solution(int[][] signals) {
-        int answer = 0;
-    
         int lcm = 1;    
         for (int[] signal : signals) {
             int total = signal[0] + signal[1] + signal[2];

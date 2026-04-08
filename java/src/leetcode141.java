@@ -1,7 +1,4 @@
-import org.w3c.dom.NodeList;
-
 import java.util.HashSet;
-import java.util.Set;
 
 /**
  * @author laegel

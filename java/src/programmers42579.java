@@ -1,6 +1,17 @@
+import java.util.*;
 /*
 https://school.programmers.co.kr/learn/courses/30/lessons/42579
 */
+class Song {
+    int id;
+    int play;
+    
+    Song(int id, int play) {
+        this.id = id;
+        this.play = play;
+    }
+}
+
 public class programmers42579 {
     public int[] solution(String[] genres, int[] plays) {
         int[] answer = {};
