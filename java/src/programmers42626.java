@@ -1,3 +1,5 @@
+import java.util.PriorityQueue;
+
 public class programmers42626 {
     public int solution(int[] scoville, int K) {
         PriorityQueue<Integer> p = new PriorityQueue<>();
