@@ -1,6 +1,5 @@
 public class programmers42860 {
     public int solution(String name) {
-        int answer = 0;
         int n = name.length();
         int count = 0;
         for (int i = 0; i < n; i++) {
