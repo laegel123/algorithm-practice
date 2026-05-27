@@ -1,8 +1,10 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class leetcode118 {
-    
-}public List<List<Integer>> generate(int numRows) {
+    public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> result = new ArrayList<>();
-        
+
         for (int i = 0; i < numRows; i++) {
             List<Integer> row = new ArrayList<>();
             for (int j = 0; j <= i; j++) {
@@ -12,9 +14,11 @@ public class leetcode118 {
                     row.add(result.get(i - 1).get(j - 1) + result.get(i - 1).get(j));
                 }
             }
-            
+
             result.add(row);
         }
 
         return result;
     }
+}
+
