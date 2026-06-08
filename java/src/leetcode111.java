@@ -1,8 +1,6 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-import javax.swing.tree.TreeNode;
-
 public class leetcode111 {
     public int minDepth(TreeNode root) {
         if (root == null) {

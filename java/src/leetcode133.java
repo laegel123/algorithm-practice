@@ -1,26 +1,27 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
 public class leetcode133 {
     class Node {
         public int val;
-        public leetcode116.Node left;
-        public leetcode116.Node right;
-        public leetcode116.Node next;
-        public Node neighbor;
+        public List<Node> neighbors;
 
-        public Node() {}
+        public Node() {
+            val = 0;
+            neighbors = new ArrayList<>();
+        }
 
         public Node(int _val) {
             val = _val;
+            neighbors = new ArrayList<>();
         }
 
-        public Node(int _val, leetcode116.Node _left, leetcode116.Node _right, leetcode116.Node _next) {
+        public Node(int _val, ArrayList<Node> _neighbors) {
             val = _val;
-            left = _left;
-            right = _right;
-            next = _next;
+            neighbors = _neighbors;
         }
     };
 

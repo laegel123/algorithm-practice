@@ -2,32 +2,13 @@
 
 public class leetcode226 {
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
+    public TreeNode invertTree(TreeNode root) {
+        if (root == null) return null;
 
-        TreeNode() {
-        }
+        TreeNode temp = root.left;
+        root.left = invertTree(root.right);
+        root.right = invertTree(temp);
 
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-
-        public TreeNode invertTree(TreeNode root) {
-            if (root == null) return null;
-
-            TreeNode temp = root.left;
-            root.left = invertTree(root.right);
-            root.right = invertTree(temp);
-
-            return root;
-        }
+        return root;
     }
 }

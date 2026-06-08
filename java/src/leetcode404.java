@@ -1,5 +1,3 @@
-import javax.swing.tree.TreeNode;
-
 public class leetcode404 {
     public int sumOfLeftLeaves(TreeNode root) {
         if (root == null) {
